@@ -4,7 +4,19 @@
 #include<vector>
 #include<sstream>
 
+
 using namespace std;
+
+void view_contact_info()
+{
+  cout<<"Designed by Students of Kathmandu Uniiversity, KUSOS"<<endl;
+  cout<<"For the Partial Fulfilment of Second Semester"<<endl;
+  cout<<"Ishwar K.c (24)"<<endl;
+  cout<<"Subask Khatri(33)"<<endl;
+  cout<<"Susil Raj Neupane(34)"<<endl;
+  cout<<"Naman Subedi(53)"<<endl;
+  cout<<"Nayan Magar(57)"<<endl;
+}
 
 void add_record()
 {
@@ -166,7 +178,6 @@ int update_record()
 
 	// renaming the updated file with the existing file name 
 	rename("inventorynew.csv", "inventory.csv"); 
-
   return 0;
 }
 
@@ -295,7 +306,7 @@ int main()
    }
    else if(opt2 == 4)
    {
-     //del_record();
+     delete_record();
    }
    else if(opt2 == 5)
    {
@@ -309,10 +320,28 @@ int main()
    goto inv_page;
    }
 
-   //if(opt1 == 2)
+   else if(opt1 == 4)
    {
-
+     view_contact_info();
+     goto home;
    }
-   
-  return 0;
+   else if(opt1 == 2)
+   {
+     cout<<"clientele not coded yet"<<endl;
+     goto home;
+   }
+   else if(opt1 == 3)
+   {
+     cout<<"make sales not coded yet"<<endl;
+     goto home;
+   }
+   else if(opt1 == 5)
+   {
+    return 0;
+   }
+   else
+   {
+     cout<<"Invalid Choice"<<endl;
+     goto home;
+   }
 }
